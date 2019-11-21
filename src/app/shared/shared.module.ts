@@ -7,6 +7,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { Nopage404Component } from './nopage404/nopage404.component';
 import { RouterModule } from '@angular/router';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RouterModule } from '@angular/router';
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    PipesModule
   ]
 })
 export class SharedModule { }

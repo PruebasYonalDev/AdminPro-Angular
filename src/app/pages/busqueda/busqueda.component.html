@@ -1,0 +1,81 @@
+<div class="row">
+
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Usuarios</h4>
+
+                <table class="table table-hover" *ngIf="usuarioModel.length > 0">
+
+                    <tbody>
+                        <tr *ngFor="let usuario of usuarioModel" routerLink="/usuarios" class="pointer">
+                            <td>
+                                <img [src]="usuario.img | imagen: 'usuario'" alt="Imagen usuario" class="img-50 img-circle">
+                            </td>
+                            <td>{{usuario.nombre}}</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                <div class="alert alert-info" *ngIf="usuarioModel.length === 0">
+                    No se encontraron registros con ese nombre
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Médicos</h4>
+
+                <table class="table table-hover" *ngIf="medicoModel.length > 0">
+
+                    <tbody>
+                        <tr *ngFor="let medico of medicoModel" routerLink="/medicos" class="pointer">
+                            <td>
+                                <img [src]="medico.img | imagen: 'medico'" alt="Imagen medico" class="img-50 img-circle ">
+                            </td>
+                            <td>{{medico.nombre}}</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                <div class="alert alert-info" *ngIf="medicoModel.length === 0">
+                    No se encontraron registros con ese nombre
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Hospitales</h4>
+
+                <table class="table table-hover" *ngIf="hospitalModel.length > 0">
+
+                    <tbody>
+                        <tr *ngFor="let hospital of hospitalModel" routerLink="/hospital" class="pointer">
+                            <td>
+                                <img [src]="hospital.img | imagen: 'hospital'" alt="Imagen hospital" class="img-50 img-circle">
+                            </td>
+                            <td>{{hospital.nombre}}</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+                <div class="alert alert-info" *ngIf="hospitalModel.length === 0">
+                    No se encontraron registros con ese nombre
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
